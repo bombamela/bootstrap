@@ -1,0 +1,2 @@
+watch ffmpeg -r 2 -s 640x480 -i zot_00000.jpg http://localhost:5001/feed1.ffm
+

@@ -1,0 +1,28 @@
+<html><head><title>ffserver Status</title>
+</head>
+<body><h1>ffserver Status</h1>
+<h2>Available Streams</h2>
+<table cellspacing=0 cellpadding=4>
+<tr><th valign=top>Path<th align=left>Served<br>Conns<th><br>bytes<th valign=top>Format<th>Bit rate<br>kbits/s<th align=left>Video<br>kbits/s<th><br>Codec<th align=left>Audio<br>kbits/s<th><br>Codec<th align=left valign=top>Feed
+<tr><td><a href="/status.html">status.html</a> <td align=right> 1 <td align=right> 0 <td align=center> - <td align=right> - <td align=right> - <td><td align=right> - <td>
+<tr><td><a href="/test.asx">test.asf</a> <td align=right> 0 <td align=right> 0 <td align=center> asf_stream <td align=right> 700 <td align=right> 700 <td> msmpeg4  <td align=right> 0 <td>  <td>feed1.ffm
+<tr><td><a href="/test.sdp">test.sdp</a> <td align=right> 0 <td align=right> 0 <td align=center> rtsp <td align=right> 2000 <td align=right> 2000 <td> mpeg4  <td align=right> 0 <td>  <td>feed1.ffm
+<tr><td><a href="/test.mjpg">test.mjpg</a> <td align=right> 0 <td align=right> 0 <td align=center> mpjpeg <td align=right> 64 <td align=right> 64 <td> mjpeg  <td align=right> 0 <td>  <td>feed1.ffm
+<tr><td><a href="/test_lowres.mjpg">test_lowres.mjpg</a> <td align=right> 0 <td align=right> 0 <td align=center> mpjpeg <td align=right> 64 <td align=right> 64 <td> mjpeg  <td align=right> 0 <td>  <td>feed1.ffm
+</table>
+<h2>Feed feed1.ffm</h2><table cellspacing=0 cellpadding=4><tr><th>Stream<th>type<th>kbits/s<th align=left>codec<th align=left>Parameters
+<tr><td align=right>0<td>video<td align=right>700<td>msmpeg4<td>640x480, q=1-5, fps=2
+<tr><td align=right>1<td>video<td align=right>2000<td>mpeg4<td>640x480, q=2-31, fps=4
+<tr><td align=right>2<td>video<td align=right>64<td>mjpeg<td>640x480, q=1-5, fps=2
+<tr><td align=right>3<td>video<td align=right>64<td>mjpeg<td>160x128, q=2-31, fps=2
+</table>
+<h2>Connection Status</h2>
+Number of connections: 1 / 1000<br>
+Bandwidth in use: 0k / 10000k<br>
+<table>
+<tr><th>#<th>File<th>IP<th>Proto<th>State<th>Target bits/sec<th>Actual bits/sec<th>Bytes transferred
+<tr><td><b>1</b><td>status.html<td>172.17.0.1<td>HTTP/1.1<td>HTTP_WAIT_REQUEST<td align=right>0 <td align=right>0 <td align=right>0 
+</table>
+<hr size=1 noshade>Generated at Wed Aug 24 19:33:51 2016
+</body>
+</html>

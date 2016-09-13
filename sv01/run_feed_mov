@@ -1,0 +1,2 @@
+watch ffmpeg -i cam2_007.mp4  http://localhost:5001/feed1.ffm
+

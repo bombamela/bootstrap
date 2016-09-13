@@ -1,0 +1,97 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "video",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://coopvideo:7000/test.mjpg",
+						"refresh": 300
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 11
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": "2",
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"clc\"][\"full_string_value\"]",
+						"sparkline": false,
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"ppl\"][0][\"datapoints\"][0][0]",
+						"sparkline": true,
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "graph",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": "2",
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://coopvideo:8009/render?target=feng.cam2.rawcount&height400&width=660&from=-1min",
+						"refresh": 4
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "clc",
+			"type": "clock",
+			"settings": {
+				"refresh": 1
+			}
+		},
+		{
+			"name": "ppl",
+			"type": "JSON",
+			"settings": {
+				"url": "http://coopvideo:8009/render?target=feng.cam2.rawcount&from=-2s&format=json",
+				"use_thingproxy": true,
+				"refresh": 1.5,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 3
+}

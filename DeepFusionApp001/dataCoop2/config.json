@@ -1,0 +1,75 @@
+{
+    "data": {
+        "cam2": {
+                    "test_idl": "",
+                    "test_poc": "",
+                    "train_idl" :"",
+                    "idl_mean": "./workdir/mean.npy",
+                    "test_model": "./workdir/trainedmodel.h5",
+                    "frame_min": 1,
+                    "frame_max": 150,
+                    "num_test_images":258 
+                 }, 
+        "capture_rtsp": "rtsp://admin:Cisco123@10.155.8.102:554/StreamingSetting?version=1.0&action=getRTSPStream&ChannelID=1&ChannelName=Channel1",         
+        "capture_seq": "workdir/coopcam1/coopcam_snapshot-%06d.jpg", 
+        "capture": "workdir/coop2.mjpg",
+        "capture_usb" : 0,
+        "Verbose": true,
+        "Display": true, 
+        "Ghost": false,
+        "fieldView": false,
+        "CIC_Threshold":4,
+        "costUnassignedTracks":100,
+        "ROI_Threshold":[-100, 740, -100, 580]
+    },
+    "solver": {
+        "base_lr": 0.2,
+        "max_iter": 90001,
+        "test_iter": 100,
+        "test_interval": 1000,
+        "momentum": 0.5,
+        "random_seed": 2,
+        "clip_gradients": 0.1,
+        "gamma": 0.8,
+        "stepsize": 50000,
+        "cam2":{"weights": "./workdir/coopcam1_04_30000.h5"}
+    },
+    "logging": {
+        "display_delay_ms": 300,
+        "Outfile":"./tmp/coop_%05d.jpg",
+        "frame_min": 0,
+        "frame_max": 89,
+        "MP4file":"coop_test01.mp4",
+        "DoMP4":"avconv -r 2 -i ./tmp/zot_%05d.png -b:v 1000k  ",
+        "display_interval": 100,
+        "snapshot_prefix": "/tmp/coopcam1_04",
+        "snapshot_interval": 10000,
+        "schematic_path": "/tmp/SCSchema.png",
+        "graph_prefix": "/tmp/coop_History",
+        "log_file": "/tmp/log_coop_coopcam1.txt",
+        "graph_interval": 500
+    },
+    "net": {
+        "init_range": 0.1,
+        "max_len": 5,
+        "lstm_num_cells": 250,
+        "dropout_ratio": 0.15,
+        "hungarian_match_ratio": 0.5,
+        "hungarian_permute_matches": true,
+        "hungarian_loss_weight": 0.03,
+        "googlenet_lr_mult": 4,
+        "grid_height": 15,
+        "grid_width": 20,
+        "img_height": 480,
+        "img_width": 640,
+        "region_size": 64
+    },
+	"runtime": {
+		"roi_x_left":0,
+		"roi_x_right":640,
+		"roi_y_top":0,
+		"roi_y_bottom":480,
+		"path_rawcount":"feng.cam2.rawcount",
+		"graphite_ipaddress":"10.40.170.137"
+	}
+}
